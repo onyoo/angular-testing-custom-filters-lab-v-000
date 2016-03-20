@@ -15,12 +15,15 @@ describe('Favorite Food Filter', function () {
 			name: 'daejun',
 			favoriteFood: '양갈비'
 		},{
+			name: 'onyoo',
+			favoriteFood: '양갈비'
+		},{
 			name: 'miran',
 			favoriteFood: '김밥'
 		}];
 
 		var filteredPeeps = $filter('favoriteFood')(people,'양갈비');
-
+		expect(filteredPeeps.length).toEqual(2);
 		expect(filteredPeeps[0]).toEqual({name: 'daejun', favoriteFood: '양갈비'});
 	});
 
